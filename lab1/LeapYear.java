@@ -29,5 +29,14 @@ public class LeapYear {
             }
         }
     }
+
+    /**
+     *  判断这个年份是否是闰年的方法
+     */
+    public static boolean isLeapYear(int year){
+       if(year % 400 ==0 || (year % 4 == 0 && year % 100 != 0))
+           return true;
+       else return false;
+    }
 }
 
