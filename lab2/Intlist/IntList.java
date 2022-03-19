@@ -59,7 +59,8 @@ public class IntList {
             L = L.rest;
             ptr = ptr.rest;
         }
-        return res;
+        //return res;
+        return ptr;
     }
 
     /**
@@ -91,7 +92,15 @@ public class IntList {
      */
     public static IntList catenate(IntList A, IntList B) {
         //TODO:  fill in method
-        return null;
+        if(A == null && B == null) return null;
+            else if(A == null) return B;
+                else if(B == null) return A;
+        IntList Node = new IntList(A.first,null);
+        while(Node != null){
+            Node = Node.rest;
+        }
+        Node.rest = B;
+        return Node;
     }
 
 
