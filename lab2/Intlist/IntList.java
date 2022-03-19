@@ -55,12 +55,11 @@ public class IntList {
         IntList ptr = res;
         L = L.rest;
         while (L != null) {
-            ptr.rest = new IntList(L.first * L.first, null);
+            ptr.rest = new IntList(L.first * L.first, null);//尾插法
             L = L.rest;
             ptr = ptr.rest;
         }
-        //return res;
-        return ptr;
+        return res;
     }
 
     /**
@@ -93,14 +92,14 @@ public class IntList {
     public static IntList catenate(IntList A, IntList B) {
         //TODO:  fill in method
         if(A == null && B == null) return null;
-            else if(A == null) return B;
-                else if(B == null) return A;
-        IntList Node = new IntList(A.first,null);
-        while(Node != null){
+        if(A == null) return B;
+        IntList Node = new IntList(A.first,A.rest);
+        IntList ptr = Node;
+        while(Node.rest != null){
             Node = Node.rest;
         }
         Node.rest = B;
-        return Node;
+        return ptr;
     }
 
 
