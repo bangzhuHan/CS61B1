@@ -91,15 +91,21 @@ public class IntList {
      */
     public static IntList catenate(IntList A, IntList B) {
         //TODO:  fill in method
-        if(A == null && B == null) return null;
+        /*if(A == null && B == null) return null;
         if(A == null) return B;
-        IntList Node = new IntList(A.first,A.rest);
+        IntList Node = new IntList(A.first,null);
+
         IntList ptr = Node;
         while(Node.rest != null){
             Node = Node.rest;
         }
         Node.rest = B;
-        return ptr;
+        return ptr;*/
+        if (A == null) {
+            return B;
+        } else {
+            return new IntList(A.first, catenate(A.rest, B));
+        }
     }
 
 
