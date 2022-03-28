@@ -18,12 +18,12 @@ public class Planet {
     }
 
     public Planet(Planet p) {
-        this.xxPos = xxPos;
-        this.yyPos = yyPos;
-        this.xxVel = xxVel;
-        this.yyVel = yyVel;
-        this.mass = mass;
-        this.imgFileName = imgFileName;
+        this.xxPos = p.xxPos;
+        this.yyPos = p.yyPos;
+        this.xxVel = p.xxVel;
+        this.yyVel = p.yyVel;
+        this.mass = p.mass;
+        this.imgFileName = p.imgFileName;
     }
 
 
