@@ -1,6 +1,3 @@
-import org.testng.annotations.Test;
-
-import java.util.Scanner;
 
 public class NBody {
     /** read radius of planets in a certain txt file*/
