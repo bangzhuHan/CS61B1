@@ -43,27 +43,27 @@ public class ArrayDequeTest {
         System.out.println("Running add/isEmpty/Size test.");
         System.out.println("Make sure to uncomment the lines below (and delete this print statement).");
 
-        ArrayDeque<String> lld1 = new ArrayDeque<String>();
-
-        boolean passed = checkEmpty(true, lld1.isEmpty());
-
-        lld1.addFirst("front");
-
-        // The && operator is the same as "and" in Python.
-        // It's a binary operator that returns true if both arguments true, and false otherwise.
-        passed = checkSize(1, lld1.size()) && passed;
-        passed = checkEmpty(false, lld1.isEmpty()) && passed;
-
-        lld1.addLast("middle");
-        passed = checkSize(2, lld1.size()) && passed;
-
-        lld1.addLast("back");
-        passed = checkSize(3, lld1.size()) && passed;
-
-        System.out.println("Printing out deque: ");
-        lld1.printDeque();
-
-        printTestStatus(passed);
+//        ArrayDeque<String> lld1 = new ArrayDeque<String>();
+//
+//        boolean passed = checkEmpty(true, lld1.isEmpty());
+//
+//        lld1.addFirst("front");
+//
+//        // The && operator is the same as "and" in Python.
+//        // It's a binary operator that returns true if both arguments true, and false otherwise.
+//        passed = checkSize(1, lld1.size()) && passed;
+//        passed = checkEmpty(false, lld1.isEmpty()) && passed;
+//
+//        lld1.addLast("middle");
+//        passed = checkSize(2, lld1.size()) && passed;
+//
+//        lld1.addLast("back");
+//        passed = checkSize(3, lld1.size()) && passed;
+//
+//        System.out.println("Printing out deque: ");
+//        lld1.printDeque();
+//
+//        printTestStatus(passed);
 
     }
 
@@ -74,19 +74,19 @@ public class ArrayDequeTest {
 
         System.out.println("Make sure to uncomment the lines below (and delete this print statement).");
 
-        ArrayDeque<Integer> lld1 = new ArrayDeque<Integer>();
-        // should be empty
-        boolean passed = checkEmpty(true, lld1.isEmpty());
-
-        lld1.addFirst(10);
-        // should not be empty
-        passed = checkEmpty(false, lld1.isEmpty()) && passed;
-
-        lld1.removeFirst();
-        // should be empty
-        passed = checkEmpty(true, lld1.isEmpty()) && passed;
-
-        printTestStatus(passed);
+//        ArrayDeque<Integer> lld1 = new ArrayDeque<Integer>();
+//        // should be empty
+//        boolean passed = checkEmpty(true, lld1.isEmpty());
+//
+//        lld1.addFirst(10);
+//        // should not be empty
+//        passed = checkEmpty(false, lld1.isEmpty()) && passed;
+//
+//        lld1.removeFirst();
+//        // should be empty
+//        passed = checkEmpty(true, lld1.isEmpty()) && passed;
+//
+//        printTestStatus(passed);
 
     }
 

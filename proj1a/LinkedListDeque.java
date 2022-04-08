@@ -34,9 +34,9 @@ public class LinkedListDeque<T> {
 
     //Add an item of type T to the front of the deque
     public void addFirst(T item){
-        Node p = new Node(null, item, null);
-        p.prev = sentinel;
-        p.next = sentinel.next;
+        Node p = new Node(sentinel, item, sentinel.next);
+//        p.prev = sentinel;
+//        p.next = sentinel.next;
         sentinel.next = p;
         sentinel.next.prev = p;
         size++;
@@ -44,9 +44,9 @@ public class LinkedListDeque<T> {
 
     //Add an item of type T to the back of the deque
     public void addLast(T item){
-        Node p = new Node(null, item, null);
-        p.next = sentinel;
-        p.prev = sentinel.prev;
+        Node p = new Node(sentinel.prev, item, sentinel);
+//        p.next = sentinel;
+//        p.prev = sentinel.prev;
         sentinel.prev = p;
         sentinel.prev.next = p;
         size++;
