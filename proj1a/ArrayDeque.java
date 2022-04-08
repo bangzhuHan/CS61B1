@@ -195,8 +195,9 @@ public class ArrayDeque<T> {
      * @return
      */
     public T removeFirst(){
-        if(isEmpty())
+        if(isEmpty()) {
             return null;
+        }
         if(this.nextFirst == this.arrays.length - 1){
             this.nextFirst = 0;
         } else {
@@ -216,9 +217,12 @@ public class ArrayDeque<T> {
     public T removeLast(){
         if(isEmpty())
             return null;
-        if(this.nextLast == 0)
+        if(this.nextLast == 0) {
             this.nextLast = this.arrays.length - 1;
-        else this.nextLast--;
+        }
+        else {
+            this.nextLast--;
+        }
         T t = this.arrays[this.nextLast];
         this.arrays[this.nextLast] = null;
         size--;
