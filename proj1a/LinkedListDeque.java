@@ -1,6 +1,4 @@
-import org.w3c.dom.Node;
 
-import java.util.Deque;
 
 /**
  * @author xh
@@ -137,7 +135,7 @@ public class LinkedListDeque<T> {
             index--;
         }
         return  getRecrusive(node, index);
-    } 
+    }
 }
 
 
