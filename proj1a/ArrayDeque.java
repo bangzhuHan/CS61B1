@@ -80,7 +80,12 @@ public class ArrayDeque<T> {
      * @return
      */
     public boolean isEmpty(){
-        return this.nextLast - this.nextFirst == 1;
+        //return this.nextLast - this.nextFirst == 1;
+        if (size == 0) {
+            return true;
+        }
+
+        return false;
     }
 
     /**
@@ -95,10 +100,30 @@ public class ArrayDeque<T> {
      * Prints the items in the deque from first to last, separated by a space.
      */
     public void printDeque(){
-        for(int i = this.nextFirst + 1; i < size; i++){
-            System.out.print(this.arrays[i] + " ");
+//        for(int i = this.nextFirst + 1; i < size; i++){
+//            System.out.print(this.arrays[i] + " ");
+//        }
+//        System.out.println();
+        boolean flag = true;
+        int first = this.nextFirst + 1;
+        int last = this.nextLast;
+
+        while (flag) {
+
+            System.out.print(this.arrays[first]);
+            first++;
+
+            if (first > this.arrays.length - 1) {
+                first = 0;
+            }
+
+            if (first == last) {
+                flag = false;
+            }
         }
+
         System.out.println();
+
     }
 
     private void resizeWithIncrease() {
